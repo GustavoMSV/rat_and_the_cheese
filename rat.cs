@@ -29,7 +29,7 @@ map[0, 4] = 0;
 map[1, 4] = 0;
 map[2, 4] = 0;
 map[3, 4] = 0;
-map[4, 4] = 4;
+map[4, 4] = 3;
 
 foreach (int block in map)
 {
@@ -38,6 +38,20 @@ foreach (int block in map)
         Console.Write("\n");
         linebreaker = 0;
     }
-    Console.Write($"[ {block} ]");
     linebreaker++;
+    switch (block)
+    {
+        case 0:
+            Console.Write($"[    {block}   ]");
+            break;
+        case 1:
+            Console.Write($"[    {block}   ]");
+            break;
+        case 2:
+            Console.Write("[  Rato  ]");
+            break;
+        case 3:
+            Console.Write("[ Queijo ]");
+            break;
+    } 
 }
